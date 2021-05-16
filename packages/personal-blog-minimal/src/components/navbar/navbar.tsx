@@ -12,7 +12,6 @@ import React, { useState } from "react";
 
 import { DrawerProvider } from "../drawer/drawer-context";
 import { Link } from "gatsby";
-import LogoImage from "../../images/logo.png";
 import Menu from "./menu";
 import MobileMenu from "./mobile-menu";
 import SearchContainer from "../../containers/search/search";
@@ -64,7 +63,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = ({
     <HeaderWrapper className={addAllClasses.join(" ")} {...props}>
       <NavbarWrapper className="navbar">
         <DrawerProvider>
-          <MobileMenu items={MenuItems} logo={LogoImage} />
+          <MobileMenu items={MenuItems} />
         </DrawerProvider>
         <Logo>
           <Link to="/">

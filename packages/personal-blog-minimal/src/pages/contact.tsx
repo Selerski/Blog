@@ -8,7 +8,7 @@ const ContactPage: React.FunctionComponent<PageProps> = () => {
   return (
     <Layout>
       <SEO
-        title="Contact Us"
+        title="Contact me"
         description="Get in touch with me with any questions, suggestions, advice or queries."
       />
 

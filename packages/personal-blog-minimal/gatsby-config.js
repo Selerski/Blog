@@ -7,8 +7,8 @@ module.exports = {
     title: `pawelpietruszka.net`,
     author: `Pawel`,
     about: `Exploring exciting and quirky aspects of software engineering. Mechanical Engineering graduate, former patent attorney, currently working as a Full Stack Developer at Vortexa. Based in London, UK.`,
-    description: `Software engineering blog by Pawel Pietruszka`,
-    siteUrl: `https://storyhub-minimal-tarex.redq.now.sh`,
+    description: `Software Engineering blog by Pawel Pietruszka`,
+    siteUrl: `https://pawelpietruszka.net`,
   },
   plugins: [
     {

@@ -1,6 +1,6 @@
 ---
 title: Exploring Vortexa’s new Voyage Calculator
-date: "2019-05-27"
+date: "2020-10-20"
 description: A story of the Voyage Calculator, Vortexa's latest release. How cross-team collaboration combined with clever infrastructural setup can yield incredible results.
 tags:
   ["react", "typescript", "kubernetes", "vortexa", "voyage", "analytics", "web"]

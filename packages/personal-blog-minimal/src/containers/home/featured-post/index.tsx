@@ -1,12 +1,14 @@
-import * as React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import FeaturedCard from '../../../components/featured-card/featured-card';
+import * as React from "react";
+
 import {
-  FeaturedPostWrapper,
-  FeaturedPostRow,
   FeaturedPostCol,
+  FeaturedPostRow,
+  FeaturedPostWrapper,
   SecTitle,
-} from './style';
+} from "./style";
+import { graphql, useStaticQuery } from "gatsby";
+
+import FeaturedCard from "../../../components/featured-card/featured-card";
 
 type FeaturedPostsProps = {};
 
@@ -60,7 +62,7 @@ const FeaturedPosts: React.FunctionComponent<FeaturedPostsProps> = () => {
 
   return (
     <FeaturedPostWrapper>
-      <SecTitle>Featured Stories</SecTitle>
+      <SecTitle>Recent posts</SecTitle>
       <FeaturedPostRow>
         {Posts.map(({ node }: any) => {
           const title = node.frontmatter.title || node.fields.slug;

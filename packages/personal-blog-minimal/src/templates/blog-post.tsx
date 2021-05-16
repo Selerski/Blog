@@ -1,35 +1,36 @@
-import React from 'react';
-import { graphql, Link } from 'gatsby';
-import _ from 'lodash';
-import urljoin from 'url-join';
-import { DiscussionEmbed } from 'disqus-react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import PostCard from '../components/post-card/post-card';
-import PostDetails from '../components/post-details/post-details';
 import {
-  FacebookShareButton,
-  TwitterShareButton,
-  PinterestShareButton,
-  RedditShareButton,
-} from 'react-share';
-import {
-  IoLogoFacebook,
-  IoLogoTwitter,
-  IoLogoPinterest,
-  IoLogoReddit,
-} from 'react-icons/io';
-import {
+  BlogPostComment,
   BlogPostDetailsWrapper,
-  RelatedPostWrapper,
-  RelatedPostItems,
-  RelatedPostTitle,
-  RelatedPostItem,
   BlogPostFooter,
   PostShare,
   PostTags,
-  BlogPostComment,
-} from './templates.style';
+  RelatedPostItem,
+  RelatedPostItems,
+  RelatedPostTitle,
+  RelatedPostWrapper,
+} from "./templates.style";
+import {
+  FacebookShareButton,
+  PinterestShareButton,
+  RedditShareButton,
+  TwitterShareButton,
+} from "react-share";
+import {
+  IoLogoFacebook,
+  IoLogoPinterest,
+  IoLogoReddit,
+  IoLogoTwitter,
+} from "react-icons/io";
+import { Link, graphql } from "gatsby";
+
+import { DiscussionEmbed } from "disqus-react";
+import Layout from "../components/layout";
+import PostCard from "../components/post-card/post-card";
+import PostDetails from "../components/post-details/post-details";
+import React from "react";
+import SEO from "../components/seo";
+import _ from "lodash";
+import urljoin from "url-join";
 
 const BlogPostTemplate = (props: any) => {
   const post = props.data.markdownRemark;
@@ -63,7 +64,7 @@ const BlogPostTemplate = (props: any) => {
         />
 
         <BlogPostFooter
-          className={post.frontmatter.cover == null ? 'center' : ''}
+          className={post.frontmatter.cover == null ? "center" : ""}
         >
           {post.frontmatter.tags == null ? null : (
             <PostTags className="post_tags">
@@ -97,7 +98,7 @@ const BlogPostTemplate = (props: any) => {
           </PostShare>
         </BlogPostFooter>
         <BlogPostComment
-          className={post.frontmatter.cover == null ? 'center' : ''}
+          className={post.frontmatter.cover == null ? "center" : ""}
         >
           <DiscussionEmbed {...disqusConfig} />
         </BlogPostComment>
@@ -105,7 +106,7 @@ const BlogPostTemplate = (props: any) => {
 
       {edges.length !== 0 && (
         <RelatedPostWrapper>
-          <RelatedPostTitle>Related Posts</RelatedPostTitle>
+          <RelatedPostTitle>Related posts</RelatedPostTitle>
           <RelatedPostItems>
             {edges.map(({ node }: any) => (
               <RelatedPostItem key={node.fields.slug}>

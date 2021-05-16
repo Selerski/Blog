@@ -33,13 +33,12 @@ const encode = (data: Record<string, string>) => {
 const Contact: React.SFC<{}> = () => {
   return (
     <Formik
-      data-netlify={true}
       initialValues={{ firstName: "", email: "", message: "" }}
       onSubmit={(values, actions) => {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode(values),
+          body: encode({ "form-name": "contact", ...values }),
         })
           .then(() => {
             alert("Success");
@@ -60,7 +59,7 @@ const Contact: React.SFC<{}> = () => {
         isSubmitting,
       }: FormikProps<MyFormValues>) => (
         <>
-          <Form>
+          <Form name="contact" data-netlify={true}>
             <ContactWrapper>
               <ContactPageTitle>
                 <h2>Contact</h2>
